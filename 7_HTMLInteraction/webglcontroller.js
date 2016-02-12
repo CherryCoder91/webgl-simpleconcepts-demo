@@ -29,13 +29,20 @@ camera.position.z = 5;
 scene.add(camera);
 
 
-		
-    var loader = new THREE.JSONLoader();
-    loader.load( 'json/star-wars-vader-tie-fighter.json', function ( geometry, materials ) 
-    {
-        var mesh = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial( materials ) );
-        scene.add( mesh );
+function addTieFighter(position)
+{
+
+
+    var loader = new THREE.ObjectLoader();
+    //loader.load("json/tiefighter/star-wars-vader-tie-fighter.json", function (obj) {
+    loader.load("json/turtle/untitled-scene.json", function (obj) {
+        obj.position.set(position.x, position.y, position.z);
+        obj.rotation.y = Math.PI;
+        obj.scale.set(2.5,2.5,2.5);
+        scene.add(obj);
     });
+}
+    
 
 var startRotate = function ()
 {
@@ -153,11 +160,13 @@ function ClearAllFromScene()
 function onMouseDown(event) 
 {
     var pos = getXY(event.clientX, event.clientY);
-    var geometry = new THREE.OctahedronGeometry()
-    var material = new THREE.MeshPhongMaterial({ color: 0x1355d5, specular: 0x009900, shininess: 30, shading: THREE.FlatShading });
-    tetrahedron = new THREE.Mesh(geometry, material);
-    tetrahedron.position.set(pos.x, pos.y, pos.z);
-    scene.add(tetrahedron);
+    //var geometry = new THREE.OctahedronGeometry()
+    //var material = new THREE.MeshPhongMaterial({ color: 0x1355d5, specular: 0x009900, shininess: 30, shading: THREE.FlatShading });
+    //tetrahedron = new THREE.Mesh(geometry, material);
+    //tetrahedron.position.set(pos.x, pos.y, pos.z);
+    //scene.add(tetrahedron);
+    
+    addTieFighter(pos)
 }
 
 function getXY(cX, cY) 
