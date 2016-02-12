@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>My first Three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+        <script src="three.min.js"></script>
+        <script src="CanvasRenderer.js"></script>
+        <script src="Projector.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body> 
+        <div class="mainContainer"style="margin: 0 auto; width:750px; margin-top:1em;">
+            <p><b>Testing WebGL:</b> Interactivity between HTML5 DOM & the WEBGL Render.<p>
+                <p>The following demo illustrates how elements in the DOM, that is elements that exist as part of HTML declaration, can interact with the WebGL render.</p>
+                    
+                <div id="controlContainer">
+                <select name="shapelist" id="shapelist">
+                    <option value="Cube">Cuboid</option>
+                    <option value="Sphere">Sphere</option>
+                </select>
+                    
+                <button type="button" onclick="addObjectToScene(document.getElementById('shapelist').value)">Add selected shape to scene</button>
+                <button type="button" onclick="startRotate()">Start rotating</button>
+                <button type="button" onclick="stopRotate()">Stop rotating</button>
+                <button type="button" onclick="AddCrazyAmount(1000)">Hypnotise me...</button>
+                <button type="button" onclick="ClearAllFromScene()">Clear all</button>
+                </div>
+                <div id="wrapper">
+                    <div id="JamesWebGlViewPort"></div>
+                    <div id="rightcolumn">
+                        <p id="centertext">Click & Drag:</p>
+                        <img src="images/boxgeometry.png"" style="width:140px;height:140px;"  onmousedown="applyTracer('cube')">
+                        <img src="images/spheregeometry.png"" style="width:140px;height:140px;" onmousedown="applyTracer('sphere')">
+                        <img src="images/tetrahedrongeometry.png"" style="width:140px;height:140px;" onmousedown="applyTracer('tetrahedron')">
+                    </div>
+                </div>
+        </div>
+	</body>
+    <script src="webglcontroller.js"></script>
+</html>

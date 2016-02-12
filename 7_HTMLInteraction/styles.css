@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+}  
+.maincontainer{
+    
+}
+#wrapper {
+     width: 750px;
+     margin: 0 auto;
+}
+#JamesWebGlViewPort, #rightcolumn {
+    float: left;
+}
+#JamesWebGlViewPort {
+     width: 600px;
+     background-color: #111;
+     
+}
+#rightcolumn {
+    
+     width: 150px;
+     background-color: black;
+     min-height: 600px;
+     
+     border-style: solid;
+}
+
+#rightcolumn p{
+    color: white;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  
+  -webkit-transform: scale(0.75);
+	transform: scale(0.75);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  
+  -webkit-filter: opacity(0.4);
+}
+
+img:hover {
+  -webkit-filter: opacity(1);
+}
+
+#centertext{text-align: center;}
+
+img:active 
+{
+    -webkit-filter: opacity(1);
+    -webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+#controlContainer
+{
+    margin: 5px;
+}
