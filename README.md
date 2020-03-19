@@ -6,3 +6,7 @@ Some very basic examples of some simple concepts within WEBGL scenes.
 
 1. Clone Repo
 2. Open html file from one or more folders within a web browser that supports WEBGL.
+
+# UI Screenshot
+
+![Image of App](documentation/ui-snippet.png)
